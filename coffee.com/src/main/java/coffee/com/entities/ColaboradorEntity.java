@@ -29,15 +29,13 @@ public class ColaboradorEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
-	private String cpf;
-	
+	private String cpf;	
 	//__________________________________________ Conversão da ColaboradorEntity para ColaboradorDTO
 	public ColaboradorDTO toDto() {
 		ModelMapper mapper = new ModelMapper();
 		ColaboradorDTO dto = mapper.map(this, ColaboradorDTO.class);
 		return dto;
 	}
-	
 	//__________________________________________Relacionamento de classes SnackEntity E ColaboradorEntity
 	@JsonIgnore
 	@OneToMany(mappedBy = "colaborador")
