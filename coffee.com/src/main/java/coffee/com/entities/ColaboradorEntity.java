@@ -29,6 +29,8 @@ public class ColaboradorEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
+	
+	//@Column(unique = true) *Como gerenciar essa anotação*
 	private String cpf;	
 	//__________________________________________ Conversão da ColaboradorEntity para ColaboradorDTO
 	public ColaboradorDTO toDto() {
